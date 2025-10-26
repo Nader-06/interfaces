@@ -1,0 +1,93 @@
+/* Layout: two containers (left pack / right form) */
+.buy_main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  align-items: start;
+  padding: 16px 20px;
+}
+
+/* LEFT */
+.pack_card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pack_img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.pack_info { padding: 16px; }
+.pack_title { margin: 0 0 8px 0; }
+.pack_desc  { margin: 0 0 10px 0; line-height: 1.4; }
+.pack_price { font-size: 18px; }
+
+/* RIGHT form */
+.buy_right {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.purchase_form {
+  display: grid;
+  gap: 10px;
+}
+
+.purchase_form input,
+.purchase_form select {
+  width: 100%;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.form_row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.form_actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.primary_btn {
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 14px;
+  background: #0077cc;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.primary_btn:hover { background: #005fa3; }
+
+.secondary_btn {
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 8px 14px;
+  background: #fff;
+  cursor: pointer;
+}
+.secondary_btn:hover { background: #f3f3f3; }
+
+/* Breakpoints required by the lab */
+@media (max-width: 768px) {
+  .buy_main { grid-template-columns: 1fr; }
+  .form_row  { grid-template-columns: 1fr; }
+  .pack_img  { height: 220px; }
+}
+
+@media (max-width: 600px) {
+  .buy_main { padding: 12px; }
+  .pack_img  { height: 200px; }
+}

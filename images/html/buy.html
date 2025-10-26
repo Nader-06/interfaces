@@ -1,0 +1,111 @@
+<html>
+<head>
+    <lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/homepage.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/logged.css" />
+    <link rel="stylesheet" href="../styles/buy.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    
+</head>
+<body>
+    <header class="header" id="header">
+        <h4>Travellers without borders</h4>
+
+        <nav class="nav">
+            <a>Home</a>
+            <a>Experiences</a>
+            <a>Tips</a>
+            <a>Forum</a>
+            <a>Contact</a>
+        </nav>
+
+        <div class="right_header">
+            <img src="../images/logo.png" class="logo" id="logo">
+            <select name="languages" id="languages">
+                <option value="ES">ES</option>
+                <option value="EN">EN</option>
+            </select>
+        </div>
+    </header>
+    
+<main class="buy_main">
+  <!-- LEFT: Pack seleccionado -->
+  <section class="buy_left" aria-label="Pack seleccionado">
+    <article class="pack_card">
+      <img src="../images/middle_east.webp" alt="Oriente Medio: imagen del pack" class="pack_img" />
+      <div class="pack_info">
+        <h1 class="pack_title">Package: Middle East in One Week</h1>
+        <p class="pack_desc">
+          Route through Egypt, Jerusalem, Istanbul, and Dubai. Includes a basic guide,
+           accommodation and transport recommendations, and safety tips for backpackers.
+        </p>
+        <p class="pack_price"><strong>Price:</strong> 800 €</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- RIGHT: Formulario de compra -->
+  <aside class="buy_right" aria-label="Formulario de compra">
+    <form class="purchase_form" action="#" method="post" novalidate>
+      <h2>Complete your purchase</h2>
+
+      <label for="cust_name">Name</label>
+      <input id="cust_name" name="name" type="text" required />
+
+      <label for="cust_email">Email address</label>
+      <input id="cust_email" name="email" type="email" required />
+
+      <label for="card_type">Type of cards</label>
+      <select id="card_type" name="card_type" required>
+        <option value="" selected disabled>Select…</option>
+        <option value="visa">Visa</option>
+        <option value="mastercard">Mastercard</option>
+        <option value="amex">American Express</option>
+      </select>
+
+      <label for="card_number">Card Number</label>
+      <input id="card_number" name="card_number"
+             inputmode="numeric" pattern="\d{13,19}" placeholder="1234 5678 9012 3456" required />
+
+      <label for="card_holder">Card Name</label>
+      <input id="card_holder" name="card_holder" type="text" required />
+
+      <div class="form_row">
+        <div class="form_col">
+          <label for="exp_date">Expiry date</label>
+          <input id="exp_date" name="exp_date" type="month" required />
+        </div>
+        <div class="form_col">
+          <label for="cvv">CVV</label>
+          <input id="cvv" name="cvv" inputmode="numeric" pattern="\d{3,4}" placeholder="123" required />
+        </div>
+      </div>
+
+      <div class="form_actions">
+        <button type="submit" class="primary_btn">Buy</button>
+        <button type="reset" class="secondary_btn">Clear</button>
+      </div>
+    </form>
+  </aside>
+</main>
+
+<footer class="footer" id="footer">
+        <div class="left_footer">
+            <p class="copyright">© 2025 Travellers without borders</p>
+        </div>
+        <div class="center_footer">
+            <a class="details" href="https://policies.google.com/privacy?hl=en-US">Privacy Policy</a>
+            <a class="details" href="https://usercentrics.com/guides/terms-of-service/">Terms of Service</a>
+            <a class="details" href="https://www.website.com/contact-us/">Contact Us</a>
+            <a class="details" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">About Us</a>
+        </div>
+        <div class="right_footer">
+            <a class="facebook" href="https://www.facebook.com/?locale=es_LA"><img src="../images/facebook.png" class="facebook" id="facebook"></a>
+            <a class="instagram" href="https://www.instagram.com/"><img src="../images/instagram.jpeg" class="instagram" id="instagram"></a>
+            <a class="twitter" href="https://x.com/?lang=es"><img src="../images/twitter.jpg" class="twitter" id="twitter"></a>
+    </footer>
+
+</body>
+</html>

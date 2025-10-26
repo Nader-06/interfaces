@@ -1,0 +1,126 @@
+.registration_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+    max-width: 50%;
+    max-height: 70%;
+    background-color: lightgray;
+    margin-left: 25%;
+}
+
+.full_name,.email_address,.password_dob{
+    display:flex;
+    flex-direction: row;
+    column-gap:50px ;
+}
+
+#name,#surname,#email,#confirm_email,#password{
+    width:230px;
+    height: 30px;
+    
+}
+
+.signup_login{
+    background: lightgrey;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    width: 70%;
+}
+
+
+.btn{
+    flex: 1;
+    margin: 0 5px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.login{
+    width: 40%;
+    background: green;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+}
+
+.login:hover{
+    background: greenyellow;
+    color: black;
+
+}
+
+
+.signup{
+    width:40%;
+    background: blue;
+    color: whitesmoke;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+}
+
+.signup:hover{
+    background: turquoise;
+    color: black;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Modal overlay layout trick */
+#modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+#modal-overlay:not(.hidden) {
+    display: flex;
+}
+
+#modal-box {
+    background: #fff;
+    padding: 16px 20px;
+    border-radius: 8px;
+    max-width: 320px;
+    width: 90%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    font-family: sans-serif;
+}
+#modal-message {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000;
+}
+.modal-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+.modal-actions button {
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 13px;
+    background-color: #333;
+    color: #fff;
+}
+
+

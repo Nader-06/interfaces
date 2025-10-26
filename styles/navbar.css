@@ -1,0 +1,46 @@
+body {
+    background-color:aliceblue;
+    
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+
+
+.nav a{
+    cursor: pointer;
+    text-decoration: none;  
+    margin: 0 10px;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    transition-timing-function:linear;
+    transition-duration: 0.2s;
+    padding: 2px 10px 2px 10px;
+    border-radius: 15px;
+}
+
+a:hover{
+        background-color: lightgrey;
+        font-size: 16px;
+        
+        
+        
+        
+}
+
+.right_header{
+    display: flex;
+    align-items: center;
+
+}
+.logo{
+    height: 60px;
+    width: 60px;
+    margin-right: 10px;
+    
+}
