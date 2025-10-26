@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase - Travellers without borders</title>
+    <link rel="stylesheet" href="styles/homepage.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/logged.css" />
+    <link rel="stylesheet" href="styles/buy.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+</head>
+<body>
+    <header class="header" id="header">
+        <h4>Travellers without borders</h4>
+
+        <nav class="nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="#">Experiences</a>
+            <a href="#">Tips</a>
+            <a href="#">Forum</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="right_header">
+            <img src="images/logo.png" class="logo" id="logo" alt="Travellers without borders logo" />
+            <label class="sr-only" for="languages">Select language</label>
+            <select name="languages" id="languages" aria-label="Select language">
+                <option value="ES">ES</option>
+                <option value="EN" selected>EN</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="buy_main">
+        <section class="buy_left" aria-label="Selected pack">
+            <article class="pack_card">
+                <img src="images/middle_east.webp" alt="Selected pack image" class="pack_img" id="pack-image" />
+                <div class="pack_info">
+                    <h1 class="pack_title" id="pack-title">Package: Middle East in One Week</h1>
+                    <p class="pack_desc" id="pack-desc">
+                        Route through Egypt, Jerusalem, Istanbul, and Dubai. Includes a basic guide, accommodation and transport
+                        recommendations, and safety tips for backpackers.
+                    </p>
+                    <p class="pack_price" id="pack-price"><strong>Price:</strong> 800 €</p>
+                </div>
+            </article>
+        </section>
+
+        <aside class="buy_right" aria-label="Purchase form">
+            <form class="purchase_form" id="purchase-form" action="#" method="post" novalidate>
+                <h2>Complete your purchase</h2>
+
+                <label for="cust_name">Full name*</label>
+                <input id="cust_name" name="name" type="text" required autocomplete="name" />
+
+                <label for="cust_email">Email address*</label>
+                <input id="cust_email" name="email" type="email" required autocomplete="email" />
+
+                <label for="card_type">Card type*</label>
+                <select id="card_type" name="card_type" required>
+                    <option value="" selected>Select…</option>
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">Mastercard</option>
+                    <option value="amex">American Express</option>
+                </select>
+
+                <label for="card_number">Card number*</label>
+                <input id="card_number" name="card_number" inputmode="numeric" placeholder="1234 5678 9012 3456" required />
+
+                <label for="card_holder">Card holder name*</label>
+                <input id="card_holder" name="card_holder" type="text" required />
+
+                <div class="form_row">
+                    <div class="form_col">
+                        <label for="exp_date">Expiry date*</label>
+                        <input id="exp_date" name="exp_date" type="month" required />
+                    </div>
+                    <div class="form_col">
+                        <label for="cvv">CVV*</label>
+                        <input id="cvv" name="cvv" inputmode="numeric" placeholder="123" required />
+                    </div>
+                </div>
+
+                <div class="form_actions">
+                    <button type="submit" class="primary_btn">Comprar</button>
+                    <button type="reset" class="secondary_btn" id="reset-btn">Borrar</button>
+                </div>
+            </form>
+        </aside>
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="left_footer">
+            <p class="copyright">© 2025 Travellers without borders</p>
+        </div>
+        <div class="center_footer">
+            <a class="details" href="https://policies.google.com/privacy?hl=en-US" target="_blank" rel="noopener">Privacy Policy</a>
+            <a class="details" href="https://usercentrics.com/guides/terms-of-service/" target="_blank" rel="noopener">Terms of Service</a>
+            <a class="details" href="https://www.website.com/contact-us/" target="_blank" rel="noopener">Contact Us</a>
+            <a class="details" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank" rel="noopener">About Us</a>
+        </div>
+        <div class="right_footer">
+            <a class="facebook" href="https://www.facebook.com/?locale=es_LA" target="_blank" rel="noopener">
+                <img src="images/facebook.png" class="facebook" id="facebook" alt="Facebook" />
+            </a>
+            <a class="instagram" href="https://www.instagram.com/" target="_blank" rel="noopener">
+                <img src="images/instagram.jpeg" class="instagram" id="instagram" alt="Instagram" />
+            </a>
+            <a class="twitter" href="https://x.com/?lang=es" target="_blank" rel="noopener">
+                <img src="images/twitter.jpg" class="twitter" id="twitter" alt="Twitter" />
+            </a>
+        </div>
+    </footer>
+
+    <div id="modal-overlay" class="hidden" role="dialog" aria-modal="true" aria-labelledby="modal-message">
+        <div id="modal-box">
+            <p id="modal-message"></p>
+            <div class="modal-actions">
+                <button id="modal-confirm" class="hidden" type="button">Confirm</button>
+                <button id="modal-cancel" class="hidden" type="button">Cancel</button>
+                <button id="modal-ok" type="button">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/buy.js" defer></script>
+</body>
+</html>

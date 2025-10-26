@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome - Travellers without borders</title>
+    <link rel="stylesheet" href="styles/homepage.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/logged.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+</head>
+<body>
+    <header class="header" id="header">
+        <h4>Travellers without borders</h4>
+
+        <nav class="nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="#">Experiences</a>
+            <a href="#">Tips</a>
+            <a href="#">Forum</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="right_header">
+            <img src="images/logo.png" class="logo" id="logo" alt="Travellers without borders logo" />
+            <label class="sr-only" for="languages">Select language</label>
+            <select name="languages" id="languages" aria-label="Select language">
+                <option value="ES">ES</option>
+                <option value="EN" selected>EN</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <section class="left_main">
+            <div class="upper_banner" role="presentation"></div>
+            <div class="upper_inner_banner" aria-hidden="true"></div>
+            <div class="attraction_paragraph">
+                <p>DISCOVER THE WORLD WITHOUT BORDERS!!!</p>
+            </div>
+
+            <div class="mid_banner">
+                <button class="button_left" type="button" aria-hidden="true">◀</button>
+                <button class="button_right" type="button" aria-hidden="true">▶</button>
+
+                <div class="mid_inner_banner">
+                    <div class="trip_title">
+                        <p>The Middle East in one week</p>
+                    </div>
+                    <div class="trip_description">
+                        <p>
+                            Journey through the Middle East’s rich culture, passing from the Egyptian pyramids through Jerusalem
+                            and Istanbul, and onward to the vibrant spirit of Dubai.
+                        </p>
+                    </div>
+                    <div class="trip_price">
+                        <p class="price">800€</p>
+                    </div>
+                    <button class="buy_button" type="button" onclick="window.location.href='buy.html'">Buy now</button>
+                    <img src="images/trolley.jpg" class="trolley" alt="Suitcase icon" />
+                </div>
+            </div>
+
+            <div class="lower_banner">
+                <h2>Some feedback from our travellers' experiences</h2>
+                <div class="cards">
+                    <div class="card1">
+                        <p class="name">Europe by train</p>
+                        <img src="images/trains_europe.jpg" class="trains_europe" alt="Europe by train" />
+                        <a href="registration_form.html" class="like_icon1" aria-label="Mark Europe by train as favourite">♥</a>
+                        <button class="view_more1" type="button" onclick="window.location.href='registration_form.html'">View more</button>
+                    </div>
+
+                    <div class="card2">
+                        <p class="name">Amazon safari</p>
+                        <img src="images/amazon_safari.jpg" class="amazon_safari" alt="Amazon safari" />
+                        <a href="registration_form.html" class="like_icon2" aria-label="Mark Amazon safari as favourite">♥</a>
+                        <button class="view_more2" type="button" onclick="window.location.href='registration_form.html'">View more</button>
+                    </div>
+
+                    <div class="card3">
+                        <p class="name">Dubai sand snowboarding</p>
+                        <img src="images/sand_snowboarding.webp" class="sand_snowboarding" alt="Dubai sand snowboarding" />
+                        <a href="registration_form.html" class="like_icon3" aria-label="Mark Dubai sand snowboarding as favourite">♥</a>
+                        <button class="view_more3" type="button" onclick="window.location.href='registration_form.html'">View more</button>
+                    </div>
+
+                    <div class="card4">
+                        <p class="name">Parachuting in Rio de Janeiro</p>
+                        <img src="images/parachuting_rio.jpg" class="parachuting_rio" alt="Parachuting in Rio de Janeiro" />
+                        <a href="registration_form.html" class="like_icon4" aria-label="Mark Parachuting in Rio de Janeiro as favourite">♥</a>
+                        <button class="view_more4" type="button" onclick="window.location.href='registration_form.html'">View more</button>
+                    </div>
+
+                    <div class="card5">
+                        <p class="name">Visa for Australia</p>
+                        <img src="images/visa_australia.jpg" class="visa_australia" alt="Visa for Australia" />
+                        <a href="registration_form.html" class="like_icon5" aria-label="Mark Visa for Australia as favourite">♥</a>
+                        <button class="view_more5" type="button" onclick="window.location.href='registration_form.html'">View more</button>
+                    </div>
+
+                    <div class="card6">
+                        <p class="name">Skiing in Alaska</p>
+                        <img src="images/skiing_alaska.jpeg" class="skiing_alaska" alt="Skiing in Alaska" />
+                        <a href="registration_form.html" class="like_icon6" aria-label="Mark Skiing in Alaska as favourite">♥</a>
+                        <button class="view_more6" type="button" onclick="window.location.href='registration_form.html'">View more</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="right_main right_main--logged" aria-label="Account panel">
+            <section class="profile_box" aria-label="Profile">
+                <img src="images/pfp.jpg" alt="Profile avatar" class="profile_avatar" id="profile-avatar" />
+                <div class="profile_meta">
+                    <p class="profile_name" id="profile-name">Traveller</p>
+                    <button class="logout_btn" id="logout-btn" type="button">Cerrar sesión</button>
+                </div>
+            </section>
+
+            <section class="sidebar_section" aria-label="Look for experiences">
+                <h3>Looking for some experiences</h3>
+                <form class="filter_form" action="#" method="get">
+                    <fieldset class="checkbox_grid">
+                        <legend class="sr-only">Filter by continent</legend>
+                        <label><input type="checkbox" name="continent" value="europe" /> Europe</label>
+                        <label><input type="checkbox" name="continent" value="asia" /> Asia</label>
+                        <label><input type="checkbox" name="continent" value="america" /> America</label>
+                        <label><input type="checkbox" name="continent" value="africa" /> Africa</label>
+                    </fieldset>
+
+                    <div class="search_bar">
+                        <span aria-hidden="true" class="search_icon">🔍</span>
+                        <input type="search" name="q" placeholder="Search by keyword" aria-label="Search experiences" />
+                        <button type="submit" class="search_btn">Search</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="sidebar_section" aria-label="Latest tips">
+                <h3>Last pieces of advice</h3>
+                <ul class="tips_list" id="tips-list"></ul>
+
+                <form class="tip_form" id="tip-form" action="#" method="post" novalidate>
+                    <h4>Do you have any piece of advice?</h4>
+                    <label for="tip_title">Title</label>
+                    <input id="tip_title" name="tip_title" type="text" required />
+                    <label for="tip_desc">Description</label>
+                    <textarea id="tip_desc" name="tip_desc" rows="3" required></textarea>
+                    <button type="submit" class="tip_submit">Enviar</button>
+                </form>
+            </section>
+
+            <section class="sidebar_section" aria-label="Upcoming meetings">
+                <h3>Upcoming meetings</h3>
+                <div class="mini_cal">
+                    <div class="cal_header">
+                        <button class="cal_nav" type="button" aria-label="Previous month">‹</button>
+                        <div class="cal_title">October 2025</div>
+                        <button class="cal_nav" type="button" aria-label="Next month">›</button>
+                    </div>
+                    <table class="cal_table" aria-label="Calendar">
+                        <thead>
+                            <tr>
+                                <th>M</th>
+                                <th>T</th>
+                                <th>W</th>
+                                <th>T</th>
+                                <th>F</th>
+                                <th>S</th>
+                                <th>S</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td></td><td></td><td>1</td><td>2</td><td>3</td><td class="event">4</td><td>5</td></tr>
+                            <tr><td>6</td><td>7</td><td>8</td><td class="event">9</td><td>10</td><td>11</td><td>12</td></tr>
+                            <tr><td>13</td><td>14</td><td>15</td><td>16</td><td class="event">17</td><td>18</td><td>19</td></tr>
+                            <tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td class="event">25</td><td>26</td></tr>
+                            <tr><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td></tr>
+                        </tbody>
+                    </table>
+                    <ul class="cal_legend">
+                        <li><span class="dot"></span> Community events</li>
+                    </ul>
+                </div>
+            </section>
+        </aside>
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="left_footer">
+            <p class="copyright">© 2025 Travellers without borders</p>
+        </div>
+        <div class="center_footer">
+            <a class="details" href="https://policies.google.com/privacy?hl=en-US" target="_blank" rel="noopener">Privacy Policy</a>
+            <a class="details" href="https://usercentrics.com/guides/terms-of-service/" target="_blank" rel="noopener">Terms of Service</a>
+            <a class="details" href="https://www.website.com/contact-us/" target="_blank" rel="noopener">Contact Us</a>
+            <a class="details" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank" rel="noopener">About Us</a>
+        </div>
+        <div class="right_footer">
+            <a class="facebook" href="https://www.facebook.com/?locale=es_LA" target="_blank" rel="noopener">
+                <img src="images/facebook.png" class="facebook" id="facebook" alt="Facebook" />
+            </a>
+            <a class="instagram" href="https://www.instagram.com/" target="_blank" rel="noopener">
+                <img src="images/instagram.jpeg" class="instagram" id="instagram" alt="Instagram" />
+            </a>
+            <a class="twitter" href="https://x.com/?lang=es" target="_blank" rel="noopener">
+                <img src="images/twitter.jpg" class="twitter" id="twitter" alt="Twitter" />
+            </a>
+        </div>
+    </footer>
+
+    <div id="modal-overlay" class="hidden" role="dialog" aria-modal="true" aria-labelledby="modal-message">
+        <div id="modal-box">
+            <p id="modal-message"></p>
+            <div class="modal-actions">
+                <button id="modal-confirm" class="hidden" type="button">Confirm</button>
+                <button id="modal-cancel" class="hidden" type="button">Cancel</button>
+                <button id="modal-ok" type="button">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/logged.js" defer></script>
+</body>
+</html>
