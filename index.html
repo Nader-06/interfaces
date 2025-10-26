@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travellers without borders</title>
+    <link rel="stylesheet" href="styles/homepage.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+</head>
+<body>
+    <header class="header" id="header">
+        <h4>Travellers without borders</h4>
+
+        <nav class="nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="#">Experiences</a>
+            <a href="#">Tips</a>
+            <a href="#">Forum</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="right_header">
+            <img src="images/logo.png" class="logo" id="logo" alt="Travellers without borders logo" />
+            <label class="sr-only" for="languages">Select language</label>
+            <select name="languages" id="languages" aria-label="Select language">
+                <option value="ES">ES</option>
+                <option value="EN" selected>EN</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <section class="left_main">
+            <div class="upper_banner" role="presentation"></div>
+            <div class="upper_inner_banner" aria-hidden="true"></div>
+            <div class="attraction_paragraph">
+                <p>DISCOVER THE WORLD WITHOUT BORDERS!!!</p>
+            </div>
+
+            <div class="mid_banner">
+                <button class="button_left" id="carousel-prev" type="button" aria-label="Previous pack">◀</button>
+                <button class="button_right" id="carousel-next" type="button" aria-label="Next pack">▶</button>
+
+                <div class="mid_inner_banner">
+                    <div class="trip_title">
+                        <p id="carousel-title">The Middle East in one week</p>
+                    </div>
+                    <div class="trip_description">
+                        <p id="carousel-desc">Journey through the Middle East’s rich culture...</p>
+                    </div>
+                    <div class="trip_price">
+                        <p class="price" id="carousel-price">800€</p>
+                    </div>
+
+                    <button class="buy_button" id="carousel-buy" type="button">Buy now</button>
+                    <img src="images/trolley.jpg" class="trolley" alt="Suitcase icon" />
+                </div>
+            </div>
+
+            <div class="lower_banner">
+                <h2>Some feedback from our travellers' experiences</h2>
+                <div class="cards">
+                    <div class="card1">
+                        <p class="name">Europe by train</p>
+                        <img src="images/trains_europe.jpg" class="trains_europe" alt="Europe by train" />
+                        <a href="registration_form.html" class="like_icon1" aria-label="Mark Europe by train as favourite">♥</a>
+                        <button class="view_more1" type="button" onclick="window.location.href='registration_form.html'">View more</button>
+                    </div>
+
+                    <div class="card2">
+                        <p class="name">Amazon safari</p>
+                        <img src="images/amazon_safari.jpg" class="amazon_safari" alt="Amazon safari" />
+                        <a href="registration_form.html" class="like_icon2" aria-label="Mark Amazon safari as favourite">♥</a>
+                        <button class="view_more2" type="button" onclick="window.location.href='registration_form.html'">View more</button>
+                    </div>
+
+                    <div class="card3">
+                        <p class="name">Dubai sand snowboarding</p>
+                        <img src="images/sand_snowboarding.webp" class="sand_snowboarding" alt="Dubai sand snowboarding" />
+                        <a href="registration_form.html" class="like_icon3" aria-label="Mark Dubai sand snowboarding as favourite">♥</a>
+                        <button class="view_more3" type="button" onclick="window.location.href='registration_form.html'">View more</button>
+                    </div>
+
+                    <div class="card4">
+                        <p class="name">Parachuting in Rio de Janeiro</p>
+                        <img src="images/parachuting_rio.jpg" class="parachuting_rio" alt="Parachuting in Rio de Janeiro" />
+                        <a href="registration_form.html" class="like_icon4" aria-label="Mark Parachuting in Rio de Janeiro as favourite">♥</a>
+                        <button class="view_more4" type="button" onclick="window.location.href='registration_form.html'">View more</button>
+                    </div>
+
+                    <div class="card5">
+                        <p class="name">Visa for Australia</p>
+                        <img src="images/visa_australia.jpg" class="visa_australia" alt="Visa for Australia" />
+                        <a href="registration_form.html" class="like_icon5" aria-label="Mark Visa for Australia as favourite">♥</a>
+                        <button class="view_more5" type="button" onclick="window.location.href='registration_form.html'">View more</button>
+                    </div>
+
+                    <div class="card6">
+                        <p class="name">Skiing in Alaska</p>
+                        <img src="images/skiing_alaska.jpeg" class="skiing_alaska" alt="Skiing in Alaska" />
+                        <a href="registration_form.html" class="like_icon6" aria-label="Mark Skiing in Alaska as favourite">♥</a>
+                        <button class="view_more6" type="button" onclick="window.location.href='registration_form.html'">View more</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="right_main" aria-label="User panel">
+            <div class="upper_right_aside">
+                <div class="credentials">
+                    <label class="sr-only" for="login-username">Username</label>
+                    <input type="text" class="username" id="login-username" placeholder="Username" autocomplete="username" />
+                    <label class="sr-only" for="login-password">Password</label>
+                    <input type="password" class="password" id="login-password" placeholder="Password" autocomplete="current-password" />
+                </div>
+                <div class="save_credentials">
+                    <input type="checkbox" class="remember_me" id="remember_me" />
+                    <label for="remember_me">Remember me</label>
+                </div>
+                <div class="login_register">
+                    <button type="button" class="login_button" id="login-btn">Login</button>
+                    <button type="button" class="register_button" id="register-btn">Register</button>
+                </div>
+            </div>
+
+            <div class="lower_upper_right_aside">
+                <h3>Backpacker's Top Destinations</h3>
+                <a class="spots" href="https://www.royalgrandpalace.th/th/home" target="_blank" rel="noopener">1. Thailand</a>
+                <a class="spots" href="https://www.agoda.com/city/mumbai-in.html?cid=1844104&ds=KLBkS7tNiwUXdBSl" target="_blank" rel="noopener">2. India</a>
+                <a class="spots" href="https://vhotelnhatrang.com/" target="_blank" rel="noopener">3. Vietnam</a>
+                <a class="spots" href="https://theworldtravelguy.com/beautiful-indonesian-islands-the-best-places-to-visit-in-indonesia/" target="_blank" rel="noopener">4. Indonesia</a>
+            </div>
+
+            <div class="upper_lower_right_aside">
+                <h3>Some quick tips</h3>
+                <a class="spots" href="https://www.sanitas.es/" target="_blank" rel="noopener">1. Do not forget medical insurance</a>
+                <a class="spots" href="https://www.worldtravelguide.net/" target="_blank" rel="noopener">2. Check our experienced tour guides</a>
+                <a class="spots" href="https://e-applicationvisa.esteri.it/" target="_blank" rel="noopener">3. Find out about visas in advance</a>
+            </div>
+
+            <div class="lower_right_aside">
+                <h3>Upcoming destinations</h3>
+                <a class="spots" href="https://www.scoprireistanbul.com/" target="_blank" rel="noopener">1. Istanbul 12/10</a>
+                <a class="spots" href="https://www.scoprireistanbul.com/" target="_blank" rel="noopener">2. Petra 25/10</a>
+                <a class="spots" href="https://www.scoprireistanbul.com/" target="_blank" rel="noopener">3. Beirut 3/11</a>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="left_footer">
+            <p class="copyright">© 2025 Travellers without borders</p>
+        </div>
+        <div class="center_footer">
+            <a class="details" href="https://policies.google.com/privacy?hl=en-US" target="_blank" rel="noopener">Privacy Policy</a>
+            <a class="details" href="https://usercentrics.com/guides/terms-of-service/" target="_blank" rel="noopener">Terms of Service</a>
+            <a class="details" href="https://www.website.com/contact-us/" target="_blank" rel="noopener">Contact Us</a>
+            <a class="details" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank" rel="noopener">About Us</a>
+        </div>
+        <div class="right_footer">
+            <a class="facebook" href="https://www.facebook.com/?locale=es_LA" target="_blank" rel="noopener">
+                <img src="images/facebook.png" class="facebook" id="facebook" alt="Facebook" />
+            </a>
+            <a class="instagram" href="https://www.instagram.com/" target="_blank" rel="noopener">
+                <img src="images/instagram.jpeg" class="instagram" id="instagram" alt="Instagram" />
+            </a>
+            <a class="twitter" href="https://x.com/?lang=es" target="_blank" rel="noopener">
+                <img src="images/twitter.jpg" class="twitter" id="twitter" alt="Twitter" />
+            </a>
+        </div>
+    </footer>
+
+    <div id="modal-overlay" class="hidden" role="dialog" aria-modal="true" aria-labelledby="modal-message">
+        <div id="modal-box">
+            <p id="modal-message"></p>
+            <div class="modal-actions">
+                <button id="modal-confirm" class="hidden" type="button">Confirm</button>
+                <button id="modal-cancel" class="hidden" type="button">Cancel</button>
+                <button id="modal-ok" type="button">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/homepage.js" defer></script>
+</body>
+</html>
