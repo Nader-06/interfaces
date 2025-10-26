@@ -168,7 +168,7 @@ const trips = [
         title: "The Middle East in one week",
         desc: "Journey through the Middle East’s rich culture, passing from the Egyptian pyramids through Jerusalem and Istanbul, and onward to the vibrant spirit of Dubai.",
         price: "800€",
-        img: "../images/middle_east.webp",
+        img: "images/middle_east.webp",
         buyHref: "buy.html",
         packId: "middle-east"
     },
@@ -176,7 +176,7 @@ const trips = [
         title: "Europe by Train",
         desc: "Glide from Paris to Berlin to Prague and Venice. Iconic stations, budget food, zero stress on visas inside Schengen (mostly).",
         price: "650€",
-        img: "../images/trains_europe.jpg",
+        img: "images/trains_europe.jpg",
         buyHref: "buy.html",
         packId: "europe-train"
     },
@@ -184,7 +184,7 @@ const trips = [
         title: "Amazon Safari",
         desc: "Rainforest trekking, river dolphins, local tribes, and survival basics in the heart of the Amazon basin.",
         price: "1,200€",
-        img: "../images/amazon_safari.jpg",
+        img: "images/amazon_safari.jpg",
         buyHref: "buy.html",
         packId: "amazon-safari"
     }
