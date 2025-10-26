@@ -74,7 +74,7 @@ privacyCheck?.addEventListener("change", () => {
 });
 
 goLoginBtn?.addEventListener("click", () => {
-    window.location.href = "homepage.html";
+    window.location.href = "index.html";
 });
 
 signupBtn?.addEventListener("click", () => {

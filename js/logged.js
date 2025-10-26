@@ -8,33 +8,6 @@ const modalOk = document.getElementById("modal-ok");
 const modalConfirm = document.getElementById("modal-confirm");
 const modalCancel = document.getElementById("modal-cancel");
 
-const CAROUSEL_TRIPS = [
-  {
-    title: "The Middle East in one week",
-    desc: "Journey through the Middle East’s rich culture, passing from the Egyptian pyramids through Jerusalem and Istanbul, and onward to the vibrant spirit of Dubai.",
-    price: "800€",
-    img: "images/middle_east.webp",
-    buyHref: "buy.html",
-    packId: "middle-east"
-  },
-  {
-    title: "Europe by Train",
-    desc: "Glide from Paris to Berlin to Prague and Venice. Iconic stations, budget food, zero stress on visas inside Schengen (mostly).",
-    price: "650€",
-    img: "images/trains_europe.jpg",
-    buyHref: "buy.html",
-    packId: "europe-train"
-  },
-  {
-    title: "Amazon Safari",
-    desc: "Rainforest trekking, river dolphins, local tribes, and survival basics in the heart of the Amazon basin.",
-    price: "1,200€",
-    img: "images/amazon_safari.jpg",
-    buyHref: "buy.html",
-    packId: "amazon-safari"
-  }
-];
-
 function showModal(message, { mode = "alert", onConfirm = null, onCancel = null } = {}) {
   if (!modalOverlay || !modalMessage) {
     alert(message);
@@ -90,7 +63,7 @@ function saveTips(tips) {
 function requireSession() {
   const username = localStorage.getItem(SESSION_KEY);
   if (!username) {
-    window.location.href = "homepage.html";
+    window.location.href = "index.html";
     return null;
   }
   return username;
@@ -208,7 +181,7 @@ function populateUserData(username) {
   if (!user) {
     localStorage.removeItem(SESSION_KEY);
     showModal("Your session has expired. Please log in again.", {
-      onConfirm: () => (window.location.href = "homepage.html")
+      onConfirm: () => (window.location.href = "index.html")
     });
     return;
   }
@@ -231,84 +204,15 @@ function setupLogout() {
   if (!logoutBtn) return;
 
   logoutBtn.addEventListener("click", () => {
-    showModal("Do you want to log out?", {
+    showModal("¿Desea cerrar sesión?", {
       mode: "confirm",
       onConfirm: () => {
         localStorage.removeItem(SESSION_KEY);
         localStorage.removeItem("selectedPack");
-        window.location.href = "homepage.html";
+        window.location.href = "index.html";
       }
     });
   });
-}
-
-function setupCarousel() {
-  const titleEl = document.getElementById("carousel-title");
-  const descEl = document.getElementById("carousel-desc");
-  const priceEl = document.getElementById("carousel-price");
-  const bannerEl = document.querySelector(".mid_inner_banner");
-  const buyBtnEl = document.getElementById("carousel-buy");
-  const prevBtn = document.getElementById("carousel-prev");
-  const nextBtn = document.getElementById("carousel-next");
-
-  if (!titleEl || !descEl || !priceEl || !bannerEl || !buyBtnEl || !prevBtn || !nextBtn) {
-    return;
-  }
-
-  let currentIndex = 0;
-  let autoAdvanceId = null;
-
-  function renderTrip(index) {
-    const trip = CAROUSEL_TRIPS[index];
-
-    titleEl.textContent = trip.title;
-    descEl.textContent = trip.desc;
-    priceEl.textContent = trip.price;
-    bannerEl.style.backgroundImage = `url('${trip.img}')`;
-    buyBtnEl.onclick = () => {
-      localStorage.setItem("selectedPack", trip.packId);
-      window.location.href = trip.buyHref;
-    };
-  }
-
-  function showNext() {
-    currentIndex = (currentIndex + 1) % CAROUSEL_TRIPS.length;
-    renderTrip(currentIndex);
-  }
-
-  function showPrev() {
-    currentIndex = (currentIndex - 1 + CAROUSEL_TRIPS.length) % CAROUSEL_TRIPS.length;
-    renderTrip(currentIndex);
-  }
-
-  function startAutoAdvance() {
-    stopAutoAdvance();
-    autoAdvanceId = setInterval(showNext, 2000);
-  }
-
-  function stopAutoAdvance() {
-    if (autoAdvanceId) {
-      clearInterval(autoAdvanceId);
-      autoAdvanceId = null;
-    }
-  }
-
-  function restartAutoAdvance() {
-    startAutoAdvance();
-  }
-
-  nextBtn.addEventListener("click", () => {
-    showNext();
-    restartAutoAdvance();
-  });
-
-  prevBtn.addEventListener("click", () => {
-    showPrev();
-    restartAutoAdvance();
-  });
-
-  renderTrip(currentIndex);
-  startAutoAdvance();
 }
 
 (function init() {
@@ -320,5 +224,4 @@ function setupCarousel() {
   renderTips();
   setupTipForm(username);
   setupLogout();
-  setupCarousel();
 })();

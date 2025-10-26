@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome - Travellers without borders</title>
+    <title>Travellers without borders</title>
     <link rel="stylesheet" href="styles/homepage.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
-    <link rel="stylesheet" href="styles/logged.css" />
     <link rel="stylesheet" href="styles/footer.css" />
 </head>
 <body>
@@ -40,23 +39,21 @@
             </div>
 
             <div class="mid_banner">
-                <button class="button_left" type="button" aria-hidden="true">◀</button>
-                <button class="button_right" type="button" aria-hidden="true">▶</button>
+                <button class="button_left" id="carousel-prev" type="button" aria-label="Previous pack">◀</button>
+                <button class="button_right" id="carousel-next" type="button" aria-label="Next pack">▶</button>
 
                 <div class="mid_inner_banner">
                     <div class="trip_title">
-                        <p>The Middle East in one week</p>
+                        <p id="carousel-title">The Middle East in one week</p>
                     </div>
                     <div class="trip_description">
-                        <p>
-                            Journey through the Middle East’s rich culture, passing from the Egyptian pyramids through Jerusalem
-                            and Istanbul, and onward to the vibrant spirit of Dubai.
-                        </p>
+                        <p id="carousel-desc">Journey through the Middle East’s rich culture...</p>
                     </div>
                     <div class="trip_price">
-                        <p class="price">800€</p>
+                        <p class="price" id="carousel-price">800€</p>
                     </div>
-                    <button class="buy_button" type="button" onclick="window.location.href='buy.html'">Buy now</button>
+
+                    <button class="buy_button" id="carousel-buy" type="button">Buy now</button>
                     <img src="images/trolley.jpg" class="trolley" alt="Suitcase icon" />
                 </div>
             </div>
@@ -109,81 +106,45 @@
             </div>
         </section>
 
-        <aside class="right_main right_main--logged" aria-label="Account panel">
-            <section class="profile_box" aria-label="Profile">
-                <img src="images/pfp.jpg" alt="Profile avatar" class="profile_avatar" id="profile-avatar" />
-                <div class="profile_meta">
-                    <p class="profile_name" id="profile-name">Traveller</p>
-                    <button class="logout_btn" id="logout-btn" type="button">Cerrar sesión</button>
+        <aside class="right_main" aria-label="User panel">
+            <div class="upper_right_aside">
+                <div class="credentials">
+                    <label class="sr-only" for="login-username">Username</label>
+                    <input type="text" class="username" id="login-username" placeholder="Username" autocomplete="username" />
+                    <label class="sr-only" for="login-password">Password</label>
+                    <input type="password" class="password" id="login-password" placeholder="Password" autocomplete="current-password" />
                 </div>
-            </section>
-
-            <section class="sidebar_section" aria-label="Look for experiences">
-                <h3>Looking for some experiences</h3>
-                <form class="filter_form" action="#" method="get">
-                    <fieldset class="checkbox_grid">
-                        <legend class="sr-only">Filter by continent</legend>
-                        <label><input type="checkbox" name="continent" value="europe" /> Europe</label>
-                        <label><input type="checkbox" name="continent" value="asia" /> Asia</label>
-                        <label><input type="checkbox" name="continent" value="america" /> America</label>
-                        <label><input type="checkbox" name="continent" value="africa" /> Africa</label>
-                    </fieldset>
-
-                    <div class="search_bar">
-                        <span aria-hidden="true" class="search_icon">🔍</span>
-                        <input type="search" name="q" placeholder="Search by keyword" aria-label="Search experiences" />
-                        <button type="submit" class="search_btn">Search</button>
-                    </div>
-                </form>
-            </section>
-
-            <section class="sidebar_section" aria-label="Latest tips">
-                <h3>Last pieces of advice</h3>
-                <ul class="tips_list" id="tips-list"></ul>
-
-                <form class="tip_form" id="tip-form" action="#" method="post" novalidate>
-                    <h4>Do you have any piece of advice?</h4>
-                    <label for="tip_title">Title</label>
-                    <input id="tip_title" name="tip_title" type="text" required />
-                    <label for="tip_desc">Description</label>
-                    <textarea id="tip_desc" name="tip_desc" rows="3" required></textarea>
-                    <button type="submit" class="tip_submit">Enviar</button>
-                </form>
-            </section>
-
-            <section class="sidebar_section" aria-label="Upcoming meetings">
-                <h3>Upcoming meetings</h3>
-                <div class="mini_cal">
-                    <div class="cal_header">
-                        <button class="cal_nav" type="button" aria-label="Previous month">‹</button>
-                        <div class="cal_title">October 2025</div>
-                        <button class="cal_nav" type="button" aria-label="Next month">›</button>
-                    </div>
-                    <table class="cal_table" aria-label="Calendar">
-                        <thead>
-                            <tr>
-                                <th>M</th>
-                                <th>T</th>
-                                <th>W</th>
-                                <th>T</th>
-                                <th>F</th>
-                                <th>S</th>
-                                <th>S</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td></td><td></td><td>1</td><td>2</td><td>3</td><td class="event">4</td><td>5</td></tr>
-                            <tr><td>6</td><td>7</td><td>8</td><td class="event">9</td><td>10</td><td>11</td><td>12</td></tr>
-                            <tr><td>13</td><td>14</td><td>15</td><td>16</td><td class="event">17</td><td>18</td><td>19</td></tr>
-                            <tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td class="event">25</td><td>26</td></tr>
-                            <tr><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td></tr>
-                        </tbody>
-                    </table>
-                    <ul class="cal_legend">
-                        <li><span class="dot"></span> Community events</li>
-                    </ul>
+                <div class="save_credentials">
+                    <input type="checkbox" class="remember_me" id="remember_me" />
+                    <label for="remember_me">Remember me</label>
                 </div>
-            </section>
+                <div class="login_register">
+                    <button type="button" class="login_button" id="login-btn">Login</button>
+                    <button type="button" class="register_button" id="register-btn">Register</button>
+                </div>
+            </div>
+
+            <div class="lower_upper_right_aside">
+                <h3>Backpacker's Top Destinations</h3>
+                <a class="spots" href="https://www.royalgrandpalace.th/th/home" target="_blank" rel="noopener">1. Thailand</a>
+                <a class="spots" href="https://www.agoda.com/city/mumbai-in.html?cid=1844104&ds=KLBkS7tNiwUXdBSl" target="_blank" rel="noopener">2. India</a>
+                <a class="spots" href="https://vhotelnhatrang.com/" target="_blank" rel="noopener">3. Vietnam</a>
+                <a class="spots" href="https://theworldtravelguy.com/beautiful-indonesian-islands-the-best-places-to-visit-in-indonesia/" target="_blank" rel="noopener">4. Indonesia</a>
+            </div>
+
+            <div class="upper_lower_right_aside">
+                <h3>Some quick tips</h3>
+                <a class="spots" href="https://www.sanitas.es/" target="_blank" rel="noopener">1. Do not forget medical insurance</a>
+                <a class="spots" href="https://www.worldtravelguide.net/" target="_blank" rel="noopener">2. Check our experienced tour guides</a>
+                <a class="spots" href="https://e-applicationvisa.esteri.it/" target="_blank" rel="noopener">3. Find out about visas in advance</a>
+            </div>
+
+            <div class="lower_right_aside">
+                <h3>Upcoming destinations</h3>
+                <a class="spots" href="https://www.scoprireistanbul.com/" target="_blank" rel="noopener">1. Istanbul 12/10</a>
+                <a class="spots" href="https://www.scoprireistanbul.com/" target="_blank" rel="noopener">2. Petra 25/10</a>
+                <a class="spots" href="https://www.scoprireistanbul.com/" target="_blank" rel="noopener">3. Beirut 3/11</a>
+            </div>
         </aside>
     </main>
 
@@ -221,6 +182,6 @@
         </div>
     </div>
 
-    <script src="js/logged.js" defer></script>
+    <script src="js/homepage.js" defer></script>
 </body>
 </html>

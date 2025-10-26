@@ -58,7 +58,7 @@ function hideModal() {
 function requireSession() {
   const username = localStorage.getItem(SESSION_KEY);
   if (!username) {
-    window.location.href = "homepage.html";
+    window.location.href = "index.html";
     return null;
   }
   return username;
@@ -109,7 +109,7 @@ function setupForm(username) {
       return;
     }
 
-    showModal("Purchase completed.", () => {
+    showModal("Compra realizada", () => {
       form.reset();
       populatePack();
       populateCustomerData(username);
